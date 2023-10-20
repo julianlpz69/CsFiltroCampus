@@ -11,9 +11,9 @@ namespace Application.Repository
 {
     public class UsuarioRepository : GenericRepository<Usuario>, IUsuario
     {
-        private readonly FiltroDBContext _context;
+        private readonly TiendaRopaDBcontext _context;
 
-        public UsuarioRepository(FiltroDBContext context):base(context)
+        public UsuarioRepository(TiendaRopaDBcontext context):base(context)
         {
             _context = context;
         }

@@ -12,9 +12,9 @@ namespace Application.Repository
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
      {
-        private readonly FiltroDBContext _context;
+        private readonly TiendaRopaDBcontext _context;
     
-        public GenericRepository(FiltroDBContext context)
+        public GenericRepository(TiendaRopaDBcontext context)
         {
             _context = context;
          }

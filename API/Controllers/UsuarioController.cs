@@ -68,15 +68,7 @@ namespace API.Controllers
         }
 
 
-        // [HttpGet]
-        // [ProducesResponseType(StatusCodes.Status200OK)]
-        // [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        // public async Task<ActionResult<Pager<MascotaDto>>> Get([FromQuery]Params MascotaParams)
-        // {
-        // var Mascota = await unitofwork.Mascotas.GetAllAsync(MascotaParams.PageIndex,MascotaParams.PageSize, MascotaParams.Search,"NombreMascota");
-        // var listaMascotas= mapper.Map<List<MascotaDto>>(Mascota.registros);
-        // return new Pager<MascotaDto>(listaMascotas, Mascota.totalRegistros,MascotaParams.PageIndex,MascotaParams.PageSize,MascotaParams.Search);
-        // }
+        
 
     }
 }

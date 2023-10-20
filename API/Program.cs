@@ -20,13 +20,13 @@ builder.Services.ConfigureRatelimiting();
 builder.Services.AddJwt(builder.Configuration);
 
 
-builder.Services.AddDbContext<FiltroDBContext>(options =>{
+builder.Services.AddDbContext<TiendaRopaDBcontext>(options =>{
     string connectionString = builder.Configuration.GetConnectionString("MysqlConection");
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });
 
 var app = builder.Build();
-
+ 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

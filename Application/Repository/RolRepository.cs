@@ -10,9 +10,9 @@ namespace Application.Repository
 {
     public class RolRepository : GenericRepository<Rol>, IRol
     {
-        private readonly FiltroDBContext _context;
+        private readonly TiendaRopaDBcontext _context;
 
-        public RolRepository(FiltroDBContext context):base(context)
+        public RolRepository(TiendaRopaDBcontext context):base(context)
         {
             _context = context;
         }
