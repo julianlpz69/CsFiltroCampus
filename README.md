@@ -51,6 +51,19 @@ Ruta: http://localhost:5232/api/orden/ordenes?numero=1
 
 
 
+<br><br>
+# Listar los insumos que son vendidos por un determinado proveedor. El usuario debe ingresar el Nit de proveedor.
+
+Ruta: http://localhost:5232/api/insumo/proveedor?Nit=1002312
+
+
+
+![Captura de pantalla 2023-10-20 213804](https://github.com/julianlpz69/Julian-Ropa/assets/131847060/e1ce459e-c2be-4668-bda8-3561e1b46d89)
+
+
+![Captura de pantalla 2023-10-20 213819](https://github.com/julianlpz69/Julian-Ropa/assets/131847060/8f1a80cd-0e0f-463f-82b3-fee3e303401e)
+
+
 
 
 
@@ -78,19 +91,6 @@ Ruta: http://localhost:5232/api/venta/Ventas?numero=1
 
 
 
-
-
-<br><br>
-# Listar los insumos que son vendidos por un determinado proveedor. El usuario debe ingresar el Nit de proveedor.
-
-Ruta: http://localhost:5232/api/insumo/proveedor?Nit=1002312
-
-
-
-![Captura de pantalla 2023-10-20 213804](https://github.com/julianlpz69/Julian-Ropa/assets/131847060/e1ce459e-c2be-4668-bda8-3561e1b46d89)
-
-
-![Captura de pantalla 2023-10-20 213819](https://github.com/julianlpz69/Julian-Ropa/assets/131847060/8f1a80cd-0e0f-463f-82b3-fee3e303401e)
 
 
 
