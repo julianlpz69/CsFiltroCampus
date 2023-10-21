@@ -33,3 +33,16 @@ Ruta: http://localhost:5232/api/prenda/proteccion
 
 
 ![Captura de pantalla 2023-10-20 210432](https://github.com/julianlpz69/Julian-Ropa/assets/131847060/e4f6348c-1a33-468e-8cf4-45b4cd918241)
+
+
+
+<br><br>
+# Listar las ordenes de producción que pertenecen a un cliente especifico. El usuario debe ingresar el IdCliente y debe obtener la siguiente información:
+
+Ruta: http://localhost:5232/api/orden/ordenes?numero=1
+
+
+![Captura de pantalla 2023-10-20 211614](https://github.com/julianlpz69/Julian-Ropa/assets/131847060/268d8510-568d-4404-b6c7-6e6d3846c576)
+
+
+![Captura de pantalla 2023-10-20 211421](https://github.com/julianlpz69/Julian-Ropa/assets/131847060/d6d49cf9-02bb-4831-a367-b39eddf74a1d)
