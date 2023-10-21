@@ -52,6 +52,23 @@ Ruta: http://localhost:5232/api/orden/ordenes?numero=1
 
 
 <br><br>
+# Listar los insumos de una prenda y calcular cuanto cuesta producir una prenda especifica. El costo de la prenda dependerá de la cantidad de insumos que sean necesarios para la producción de la misma. El usuario debe ingresar en Id de la prenda.
+
+Ruta: http://localhost:5232/api/prenda/Insumos
+
+
+
+![Captura de pantalla 2023-10-20 215557](https://github.com/julianlpz69/Julian-Ropa/assets/131847060/0ddd3bd9-254a-49dd-9a14-58306b8d672e)
+
+
+
+![Captura de pantalla 2023-10-20 215541](https://github.com/julianlpz69/Julian-Ropa/assets/131847060/8154c0c6-7c8a-4e08-a393-7ef7b74fe159)
+
+
+
+
+
+<br><br>
 # Listar los insumos que son vendidos por un determinado proveedor. El usuario debe ingresar el Nit de proveedor.
 
 Ruta: http://localhost:5232/api/insumo/proveedor?Nit=1002312
