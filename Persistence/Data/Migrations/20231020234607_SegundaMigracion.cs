@@ -830,7 +830,7 @@ namespace Persistence.Data.Migrations
                 columns: new[] { "Id", "NombreTipoPersona" },
                 values: new object[,]
                 {
-                    { 1, "Persona Natura" },
+                    { 1, "Persona Natural" },
                     { 2, "Persona Juridica" }
                 });
 
@@ -872,11 +872,11 @@ namespace Persistence.Data.Migrations
                 columns: new[] { "Id", "IdEstadoFK", "IdGneroFK", "IdPrenda", "IdTipoProteccionFK", "NombrePrenda", "ValorUnitCop", "ValorUnitUsd" },
                 values: new object[,]
                 {
-                    { 1, 1, 1, "", 1, "Camiceta", 50000.0, 10.0 },
-                    { 2, 1, 2, "", 2, "Pantalon", 100000.0, 20.0 },
-                    { 3, 2, 1, "", 3, "Vestido", 120000.0, 25.0 },
-                    { 4, 1, 2, "", 1, "Gorra", 30000.0, 7.0 },
-                    { 5, 2, 1, "", 2, "Sudadera", 40000.0, 9.0 }
+                    { 1, 1, 1, "1002131", 1, "Camiceta", 50000.0, 10.0 },
+                    { 2, 1, 2, "100231", 2, "Pantalon", 100000.0, 20.0 },
+                    { 3, 2, 1, "100213", 3, "Vestido", 120000.0, 25.0 },
+                    { 4, 1, 2, "200132", 1, "Gorra", 30000.0, 7.0 },
+                    { 5, 2, 1, "2032132", 2, "Sudadera", 40000.0, 9.0 }
                 });
 
             migrationBuilder.InsertData(
@@ -941,9 +941,9 @@ namespace Persistence.Data.Migrations
                 columns: new[] { "Id", "IdMunicipioFk", "IdTipoPersonaFK", "NitProveedor", "NombreProveedor" },
                 values: new object[,]
                 {
-                    { 1, 1, 2, "1002312", "Ropa la 15" },
+                    { 1, 1, 1, "1002312", "Ropa la 15" },
                     { 2, 2, 2, "1007766", "LA ropera" },
-                    { 3, 3, 2, "1005432", "La ropita" },
+                    { 3, 3, 1, "1005432", "La ropita" },
                     { 4, 1, 2, "1001212", "Ropa Masx" },
                     { 5, 2, 2, "1006965", "Guchi" }
                 });

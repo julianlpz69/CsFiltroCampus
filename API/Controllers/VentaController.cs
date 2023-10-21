@@ -98,5 +98,16 @@ namespace API.Controllers
           unitofwork.Ventas.Remove(Venta);
           await unitofwork.SaveAsync();
           return NoContent();    }
+
+
+          [HttpGet("Ventas")]
+           [ProducesResponseType(StatusCodes.Status200OK)]
+           [ProducesResponseType(StatusCodes.Status400BadRequest)]
+          
+           public async Task<ActionResult<IEnumerable<VentaEmpleadoDto>>> Gets(int numero)
+           {
+            var Proveedores = await unitofwork.Ventas.EmpleadosVentas(numero);
+            return mapper.Map<List<VentaEmpleadoDto>>(Proveedores);
+           }
     }
 }

@@ -8,7 +8,6 @@ namespace API.Dtos
     public class EmpleadoDto
     {
         public int Id {get; set;}
-        public string IdEmpleado {get; set;}
         public string NombreEmpleado {get; set;}
         public DateOnly FechaIngreso {get; set;}
         public int IdCargoFK {get; set;}

@@ -13,10 +13,10 @@ namespace API.Profiles
         public MappingProfiles()
         {
 
-        //     CreateMap<IGrouping<Especie, Mascota>, DtoEspecieMacota>()
-        //    .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Key.Id))
-        //    .ForMember(dest => dest.NombreEspecie, opt => opt.MapFrom(src => src.Key.NombreEspecie))
-        //    .ForMember(dest => dest.Mascotas, opt => opt.MapFrom(src => src));
+            CreateMap<IGrouping<TipoProteccion, Prenda>, PrendaProteccionDto>()
+           .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Key.Id))
+           .ForMember(dest => dest.NombreProteccion, opt => opt.MapFrom(src => src.Key.Descripcion))
+           .ForMember(dest => dest.Prendas, opt => opt.MapFrom(src => src));
 
            CreateMap<Cargo, CargoDto>().ReverseMap();
 
@@ -35,6 +35,14 @@ namespace API.Profiles
            CreateMap<Empresa, EmpresaDto>().ReverseMap();
 
            CreateMap<Estado, EstadoDto>().ReverseMap();
+           
+           CreateMap<Prenda, PrendaInsumosDto>()
+           .ForMember(dest => dest.ValorRealizarPrenda, opt => opt.MapFrom(src => src.ValorUnitCop));
+
+
+
+           CreateMap<Insumo, InsumoPrendaDto>().ReverseMap();
+           CreateMap<Estado, EstadoDto>().ReverseMap();
 
            CreateMap<FormaPago, FormaPagoDto>().ReverseMap();
 
@@ -47,12 +55,19 @@ namespace API.Profiles
            CreateMap<Municipio, MunicipioDto>().ReverseMap();
 
            CreateMap<Orden, OrdenDto>().ReverseMap();
+           CreateMap<Orden, OrdenSeviciolDto>().ReverseMap();
 
            CreateMap<Pais, PaisDto>().ReverseMap();
 
            CreateMap<Prenda, PrendaDto>().ReverseMap();
+           CreateMap<Prenda, PrendaProduccionDto>()
+           .ForMember(dest => dest.IdPrenda, opt => opt.MapFrom(src => src.IdPrenda))
+           .ForMember(dest => dest.EstadoProduccion, opt => opt.MapFrom(src => "En Produccion"));
 
-           CreateMap<Proveedor, ProveedorDto>().ReverseMap();
+            CreateMap<Proveedor, ProveedorDto>().ReverseMap();
+
+            CreateMap<Proveedor, ProveedorNaturaDto>()
+            .ForMember(dest => dest.NombreTipoPersona, opt => opt.MapFrom(src => src.TipoPersona.NombreTipoPersona));
 
            CreateMap<Talla, TallaDto>().ReverseMap();
 
@@ -63,6 +78,7 @@ namespace API.Profiles
            CreateMap<TipoProteccion, TipoProteccionDto>().ReverseMap();
 
            CreateMap<Venta, VentaDto>().ReverseMap();
+           CreateMap<Venta, VentaEmpleadoDto>().ReverseMap();
 
         }
     }

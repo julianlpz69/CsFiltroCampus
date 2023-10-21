@@ -28,7 +28,7 @@ namespace Persistence.Data.Configuration
                 new DetalleVenta{Id = 2, Cantidad = 22, ValorUnit = 20000,  IdVentaFK = 2, IdTallaFk = 2, IdInventarioFK = 2 },
                 new DetalleVenta{Id = 3, Cantidad = 24, ValorUnit = 30000,  IdVentaFK = 3, IdTallaFk = 3, IdInventarioFK = 3 },
                 new DetalleVenta{Id = 4, Cantidad = 25, ValorUnit = 10000,  IdVentaFK = 1, IdTallaFk = 1, IdInventarioFK = 1 },
-                new DetalleVenta{Id = 5, Cantidad = 26, ValorUnit = 40000,  IdVentaFK = 2, IdTallaFk = 2, IdInventarioFK = 2 }
+                new DetalleVenta{Id = 5, Cantidad = 26, ValorUnit = 40000,  IdVentaFK = 4, IdTallaFk = 2, IdInventarioFK = 2 }
             );
         }
     }

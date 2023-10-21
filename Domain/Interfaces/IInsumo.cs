@@ -8,6 +8,6 @@ namespace Domain.Interfaces
 {
     public interface IInsumo : IGenericRepository<Insumo>
     {
-        
+        Task<IEnumerable<Insumo>> InsumosProveedor(string Numero);
     }
 }

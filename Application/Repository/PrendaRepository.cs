@@ -19,8 +19,9 @@ namespace Application.Repository
         public async Task<IEnumerable<Prenda>> EstadoProduccion(int Numero)
         {
             var Prendas = await _context.Prendas
+                .Include(u => u.Estado.TipoEstado)
                 .Where(c => c.DetalleOrdenes
-                .Any(f => f.Estado.TipoEstado.Id == 1 && f.IdEstadoFK == Numero))
+                .Any(f => f.Estado.TipoEstado.Id == 2 && f.IdOrdenFK == Numero))
                 .ToListAsync();
             return Prendas;
         }
@@ -37,5 +38,19 @@ namespace Application.Repository
                 .ToListAsync();
             return Prendas;
         }
+
+
+
+
+        public async Task<IEnumerable<Prenda>> PrendasInsumos()
+        {
+            var Prendas = await _context.Prendas
+                .Include(u => u.InsumoPrendas)
+                .ToListAsync();
+            return Prendas;
+        }
+
+
+        
     }
 }

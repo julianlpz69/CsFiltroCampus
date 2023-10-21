@@ -16,7 +16,7 @@ namespace Persistence.Data.Configuration
             .IsRequired();
 
             builder.HasData(
-                new TipoPersona{Id = 1, NombreTipoPersona = "Persona Natura"},
+                new TipoPersona{Id = 1, NombreTipoPersona = "Persona Natural"},
                 new TipoPersona{Id = 2, NombreTipoPersona = "Persona Juridica"}
             );
         }

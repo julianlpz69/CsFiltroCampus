@@ -1,5 +1,6 @@
 using Domain.Entities;
 using Domain.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Persistence.Data;
 
 namespace Application.Repository
@@ -11,6 +12,15 @@ namespace Application.Repository
         public InsumoRepository(TiendaRopaDBcontext context):base(context)
         {
             _context = context;
+        }
+
+        public async Task<IEnumerable<Insumo>> InsumosProveedor(string Numero)
+        {
+            var Insumos = await _context.Insumos
+                .Where(c => c.InsumoProveedores
+                .Any(f => f.Proveedor.NitProveedor == Numero))
+                .ToListAsync();
+            return Insumos;
         }
     }
 }

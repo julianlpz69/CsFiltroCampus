@@ -98,5 +98,19 @@ namespace API.Controllers
           unitofwork.Insumos.Remove(Insumo);
           await unitofwork.SaveAsync();
           return NoContent();    }
+
+
+
+          [HttpGet("proveedor")]
+           [ProducesResponseType(StatusCodes.Status200OK)]
+           [ProducesResponseType(StatusCodes.Status400BadRequest)]
+          
+           public async Task<ActionResult<IEnumerable<InsumoDto>>> Gets(string Nit)
+           {
+            var insumos = await unitofwork.Insumos.InsumosProveedor(Nit);
+            return mapper.Map<List<InsumoDto>>(insumos);
+           }
     }
+
+
 }

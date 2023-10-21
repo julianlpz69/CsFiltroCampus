@@ -98,5 +98,39 @@ namespace API.Controllers
           unitofwork.Prendas.Remove(Prenda);
           await unitofwork.SaveAsync();
           return NoContent();    }
+
+
+          [HttpGet("Produccion")]
+           [ProducesResponseType(StatusCodes.Status200OK)]
+           [ProducesResponseType(StatusCodes.Status400BadRequest)]
+          
+           public async Task<ActionResult<IEnumerable<PrendaProduccionDto>>> Get2(int numero)
+           {
+            var Prendas = await unitofwork.Prendas.EstadoProduccion(numero);
+            return mapper.Map<List<PrendaProduccionDto>>(Prendas);
+           }
+
+
+
+           [HttpGet("Proteccion")]
+           [ProducesResponseType(StatusCodes.Status200OK)]
+           [ProducesResponseType(StatusCodes.Status400BadRequest)]
+          
+           public async Task<ActionResult<IEnumerable<PrendaProteccionDto>>> GetProteccion(int numero)
+           {
+            var Prendas = await unitofwork.Prendas.TipoProteccion();
+            return mapper.Map<List<PrendaProteccionDto>>(Prendas);
+           }
+
+           [HttpGet("Insumos")]
+           [ProducesResponseType(StatusCodes.Status200OK)]
+           [ProducesResponseType(StatusCodes.Status400BadRequest)]
+          
+           public async Task<ActionResult<IEnumerable<PrendaInsumosDto>>> GetInsumos()
+           {
+            var Prendas = await unitofwork.Prendas.PrendasInsumos();
+            return mapper.Map<List<PrendaInsumosDto>>(Prendas);
+           }
+    
     }
 }

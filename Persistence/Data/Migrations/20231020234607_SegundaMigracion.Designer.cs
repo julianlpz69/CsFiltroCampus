@@ -11,7 +11,7 @@ using Persistence.Data;
 namespace Persistence.Data.Migrations
 {
     [DbContext(typeof(TiendaRopaDBcontext))]
-    [Migration("20231020225708_SegundaMigracion")]
+    [Migration("20231020234607_SegundaMigracion")]
     partial class SegundaMigracion
     {
         /// <inheritdoc />
@@ -1225,7 +1225,7 @@ namespace Persistence.Data.Migrations
                             Id = 1,
                             IdEstadoFK = 1,
                             IdGneroFK = 1,
-                            IdPrenda = "",
+                            IdPrenda = "1002131",
                             IdTipoProteccionFK = 1,
                             NombrePrenda = "Camiceta",
                             ValorUnitCop = 50000.0,
@@ -1236,7 +1236,7 @@ namespace Persistence.Data.Migrations
                             Id = 2,
                             IdEstadoFK = 1,
                             IdGneroFK = 2,
-                            IdPrenda = "",
+                            IdPrenda = "100231",
                             IdTipoProteccionFK = 2,
                             NombrePrenda = "Pantalon",
                             ValorUnitCop = 100000.0,
@@ -1247,7 +1247,7 @@ namespace Persistence.Data.Migrations
                             Id = 3,
                             IdEstadoFK = 2,
                             IdGneroFK = 1,
-                            IdPrenda = "",
+                            IdPrenda = "100213",
                             IdTipoProteccionFK = 3,
                             NombrePrenda = "Vestido",
                             ValorUnitCop = 120000.0,
@@ -1258,7 +1258,7 @@ namespace Persistence.Data.Migrations
                             Id = 4,
                             IdEstadoFK = 1,
                             IdGneroFK = 2,
-                            IdPrenda = "",
+                            IdPrenda = "200132",
                             IdTipoProteccionFK = 1,
                             NombrePrenda = "Gorra",
                             ValorUnitCop = 30000.0,
@@ -1269,7 +1269,7 @@ namespace Persistence.Data.Migrations
                             Id = 5,
                             IdEstadoFK = 2,
                             IdGneroFK = 1,
-                            IdPrenda = "",
+                            IdPrenda = "2032132",
                             IdTipoProteccionFK = 2,
                             NombrePrenda = "Sudadera",
                             ValorUnitCop = 40000.0,
@@ -1312,7 +1312,7 @@ namespace Persistence.Data.Migrations
                         {
                             Id = 1,
                             IdMunicipioFk = 1,
-                            IdTipoPersonaFK = 2,
+                            IdTipoPersonaFK = 1,
                             NitProveedor = "1002312",
                             NombreProveedor = "Ropa la 15"
                         },
@@ -1328,7 +1328,7 @@ namespace Persistence.Data.Migrations
                         {
                             Id = 3,
                             IdMunicipioFk = 3,
-                            IdTipoPersonaFK = 2,
+                            IdTipoPersonaFK = 1,
                             NitProveedor = "1005432",
                             NombreProveedor = "La ropita"
                         },
@@ -1497,7 +1497,7 @@ namespace Persistence.Data.Migrations
                         new
                         {
                             Id = 1,
-                            NombreTipoPersona = "Persona Natura"
+                            NombreTipoPersona = "Persona Natural"
                         },
                         new
                         {

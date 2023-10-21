@@ -30,7 +30,7 @@ namespace API.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<Pager<ProveedorDto>>> Get([FromQuery]Params ProveedorParams)
         {
-        var Proveedor = await unitofwork.Proveedores.GetAllAsync(ProveedorParams.PageIndex,ProveedorParams.PageSize, ProveedorParams.Search,"descripcion");
+        var Proveedor = await unitofwork.Proveedores.GetAllAsync(ProveedorParams.PageIndex,ProveedorParams.PageSize, ProveedorParams.Search,"NitProveedor");
         var listaProveedors= mapper.Map<List<ProveedorDto>>(Proveedor.registros);
         return new Pager<ProveedorDto>(listaProveedors, Proveedor.totalRegistros,ProveedorParams.PageIndex,ProveedorParams.PageSize,ProveedorParams.Search);
         }
@@ -98,5 +98,16 @@ namespace API.Controllers
           unitofwork.Proveedores.Remove(Proveedor);
           await unitofwork.SaveAsync();
           return NoContent();    }
+
+            
+           [HttpGet("Naturales")]
+           [ProducesResponseType(StatusCodes.Status200OK)]
+           [ProducesResponseType(StatusCodes.Status400BadRequest)]
+          
+           public async Task<ActionResult<IEnumerable<ProveedorNaturaDto>>> Get()
+           {
+            var Proveedores = await unitofwork.Proveedores.ProveedoresNaturales();
+            return mapper.Map<List<ProveedorNaturaDto>>(Proveedores);
+           }
     }
 }

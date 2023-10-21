@@ -20,7 +20,7 @@ namespace Application.Repository
         public async Task<IEnumerable<Proveedor>> ProveedoresNaturales()
         {
             var proveedores = await _context.Proveedores
-                .Include(p => p.TipoPersona.NombreTipoPersona)
+                .Include(p => p.TipoPersona)
                 .Where(c => c.TipoPersona.NombreTipoPersona == "Persona Natural")
                 .ToListAsync();
             return proveedores;
