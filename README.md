@@ -20,3 +20,16 @@ Ruta: http://localhost:5232/api/prenda/Produccion?numero=1
 
 
 ![Captura de pantalla 2023-10-20 204753](https://github.com/julianlpz69/Julian-Ropa/assets/131847060/c400c128-8fc2-4bf5-a7bd-647326071dee)
+
+
+
+<br><br>
+# Listar las prendas agrupadas por el tipo de protección
+
+Ruta: http://localhost:5232/api/prenda/proteccion
+
+
+![Captura de pantalla 2023-10-20 210454](https://github.com/julianlpz69/Julian-Ropa/assets/131847060/7f86f4c8-48f3-4e9d-bb20-4e7d6c55893b)
+
+
+![Captura de pantalla 2023-10-20 210432](https://github.com/julianlpz69/Julian-Ropa/assets/131847060/e4f6348c-1a33-468e-8cf4-45b4cd918241)
