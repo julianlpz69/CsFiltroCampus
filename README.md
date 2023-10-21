@@ -46,3 +46,21 @@ Ruta: http://localhost:5232/api/orden/ordenes?numero=1
 
 
 ![Captura de pantalla 2023-10-20 211421](https://github.com/julianlpz69/Julian-Ropa/assets/131847060/d6d49cf9-02bb-4831-a367-b39eddf74a1d)
+
+
+
+<br><br>
+# Listar las ventas realizadas por un empleado especifico. El usuario debe ingresar el Id del empleado y mostrar la siguiente información.
+
+Ruta: http://localhost:5232/api/venta/Ventas?numero=1
+
+
+![Captura de pantalla 2023-10-20 212743](https://github.com/julianlpz69/Julian-Ropa/assets/131847060/d16a9577-f22a-423e-9015-ccbe19399198)
+
+
+![Captura de pantalla 2023-10-20 212716](https://github.com/julianlpz69/Julian-Ropa/assets/131847060/c3099d3d-abe9-4a6d-a16e-51ac85a17ba6)
+
+
+
+
+
